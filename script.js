@@ -38,7 +38,8 @@ window.onload = function () {
 
         //各テキストボックスの入力値をチェック
         function judgeOfInput(number){
-            if(number !== "" && number >= 1 && number <= 9){
+            // if(number !== "" && number >= 1 && number <= 9){
+            if(number === "1" || number === "2" || number === "3" || number === "4" || number === "5" || number === "6" || number === "7" || number === "8" || number === "9"){
                 return judgeOfInputNumber;
             } else {
                 return judgeOfInputNumber + 1;
@@ -57,8 +58,7 @@ window.onload = function () {
             }
         }
         const resultjudgeOfject = judgeOfject(textbox2,squareBox1,Row1,Column2) + judgeOfject(textbox4,squareBox2,Row1,Column4) + judgeOfject(textbox6,squareBox2,Row1,Column6) + judgeOfject(textbox8,squareBox3,Row1,Column8) + judgeOfject(textbox11,squareBox1,Row2,Column1) + judgeOfject(textbox13,squareBox1,Row2,Column3) + judgeOfject(textbox15,squareBox2,Row2,Column5) + judgeOfject(textbox17,squareBox3,Row2,Column7) + judgeOfject(textbox19,squareBox3,Row2,Column9) + judgeOfject(textbox22,squareBox1,Row3,Column2) + judgeOfject(textbox24,squareBox2,Row3,Column4) + judgeOfject(textbox26,squareBox2,Row3,Column6) + judgeOfject(textbox28,squareBox3,Row3,Column8)
-        console.log(resultjudgeOfject)
-
+        
         //正解,不正解,入力値不正をチェック
         function judgement(number){
             if(resultjudgeOfInput === 0){
@@ -75,4 +75,22 @@ window.onload = function () {
         //判定結果をボタンに出力
         document.getElementById("text").innerHTML = judgement(resultjudgeOfject);
     };
-  };
+//   };
+
+
+    document.getElementById("text-button1").onclick = function () { 
+        document.getElementById("box2").value = "6"
+        document.getElementById("box4").value = "8"
+        document.getElementById("box6").value = "9"
+        document.getElementById("box8").value = "7"
+        document.getElementById("box11").value = "4"
+        document.getElementById("box13").value = "5"
+        document.getElementById("box15").value = "2"
+        document.getElementById("box17").value = "6"
+        document.getElementById("box19").value = "8"
+        document.getElementById("box22").value = "7"
+        document.getElementById("box24").value = "5"
+        document.getElementById("box26").value = "6"
+        document.getElementById("box28").value = "2"
+    }
+}
