@@ -1,3 +1,6 @@
+.Head {
+    display: flex;
+}
 .motherbox {
     display: flex;
 }
@@ -40,6 +43,16 @@
     width: 10%;
     text-align: center;
     border: 1px solid #232323;
-    margin-top: 50px;
+    margin-top: 25px;
+    font-size: 10px;
+  }
+
+#text-button2 {
+    display: block;
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+    border: 1px solid #232323;
+    margin-top: 25px;
     font-size: 10px;
   }
